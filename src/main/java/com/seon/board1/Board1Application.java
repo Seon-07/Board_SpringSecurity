@@ -1,13 +1,13 @@
-package com.seon.authmas;
+package com.seon.board1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AuthMasApplication {
+public class Board1Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(AuthMasApplication.class, args);
+        SpringApplication.run(Board1Application.class, args);
     }
 
 }

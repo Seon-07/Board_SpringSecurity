@@ -1,10 +1,10 @@
-package com.seon.authmas;
+package com.seon.board1;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AuthMasApplicationTests {
+class Board1ApplicationTests {
 
     @Test
     void contextLoads() {
