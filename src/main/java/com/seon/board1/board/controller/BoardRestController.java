@@ -16,19 +16,15 @@ import java.util.List;
 import java.util.UUID;
 
 /**
- * 게시글 컨트롤러
  * @author SEON
  * @version 1.0
  * @Class BoardRestController
- * @since 25. 2. 5.
+ * @since 25. 2. 23.
  */
 @RestController
 @RequestMapping("/board")
 public class BoardRestController {
 
-    /**
-     * 서비스 주입
-     */
     private final BoardService boardService;
     public BoardRestController(BoardService boardService) {
         this.boardService = boardService;
@@ -38,7 +34,7 @@ public class BoardRestController {
      * 게시글 리스트 조회 컨트롤러
      * @return ResponseEntity<ContentResult<List<BoardResDTO>>>
      * @author SEON
-     * @since 25. 2. 5.
+     * @since 25. 2. 23.
      */
     @GetMapping("/list")
     public ResponseEntity<ContentResult<List<BoardResDTO>>> getBoardList() {
@@ -51,7 +47,7 @@ public class BoardRestController {
      * @param id 게시글의 기본키
      * @return ResponseEntity<ContentResult<BoardResDTO>>
      * @author SEON
-     * @since 25. 2. 5.
+     * @since 25. 2. 23.
      */
     @GetMapping
     public ResponseEntity<ContentResult<BoardResDTO>> getBoard(@RequestParam String id) {
@@ -64,7 +60,7 @@ public class BoardRestController {
      * @param  board 입력할 게시글 객체
      * @return ResponseEntity<OperationResult>
      * @author SEON
-     * @since 25. 2. 5.
+     * @since 25. 2. 23.
      */
     @PostMapping
     public ResponseEntity<OperationResult> insertBoard(@RequestBody BoardReqDTO board) {
@@ -77,7 +73,7 @@ public class BoardRestController {
      * @param deleteBoardReqDTO 삭제할 게시글의 객체
      * @return ResponseEntity<OperationResult>
      * @author SEON
-     * @since 25. 2. 6.
+     * @since 25. 2. 23.
      */
     @PostMapping("/delete")
     public ResponseEntity<OperationResult> deleteBoard(@RequestBody DeleteBoardReqDTO deleteBoardReqDTO) {
@@ -89,13 +85,11 @@ public class BoardRestController {
      * @param updateBoard 수정할 게시글 객체
      * @return ResponseEntity<OperationResult>
      * @author SEON
-     * @since 25. 2. 5.
+     * @since 25. 2. 23.
      */
     @PostMapping("/update")
     public ResponseEntity<OperationResult> updateBoard(@RequestBody UpdateBoardReqDTO updateBoard) {
         OperationResult response = OperationResponse.operationResult(boardService.updateBoard(updateBoard));
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
-
-
 }

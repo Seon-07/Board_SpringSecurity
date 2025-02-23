@@ -17,7 +17,7 @@ import java.util.List;
  * @author SEON
  * @version 1.0
  * @Class BoardService
- * @since 25. 2. 5.
+ * @since 25. 2. 23.
  */
 @Service
 public class BoardService {
@@ -32,7 +32,7 @@ public class BoardService {
      * @param boardReqDTO 등록할 게시글 객체
      * @return boolean
      * @author SEON
-     * @since 25. 2. 5.
+     * @since 25. 2. 23.
      */
     @Transactional
     public boolean insertBoard(BoardReqDTO boardReqDTO) {
@@ -49,7 +49,7 @@ public class BoardService {
      * @param deleteBoardReqDTO 삭제할 게시글 객체
      * @return boolean
      * @author SEON
-     * @since 25. 2. 6.
+     * @since 25. 2. 23.
      */
     @Transactional
     public boolean deleteBoard(DeleteBoardReqDTO deleteBoardReqDTO) {
@@ -62,7 +62,7 @@ public class BoardService {
      * @param boardReqDTO 수정할 게시글 객체
      * @return boolean
      * @author SEON
-     * @since 25. 2. 5.
+     * @since 25. 2. 23.
      */
     @Transactional
     public boolean updateBoard(UpdateBoardReqDTO boardReqDTO) {
@@ -80,7 +80,7 @@ public class BoardService {
      * @param id 조회할 게시글 기본키
      * @return BoardResDTO
      * @author SEON
-     * @since 25. 2. 5.
+     * @since 25. 2. 23.
      */
     public BoardResDTO getBoard(String id){
         Board board = boardRepository.findById(id).orElseThrow(() -> new RuntimeException("Board not found"));
@@ -96,7 +96,7 @@ public class BoardService {
      * 게시글 리스트 조회 서비스
      * @return List<BoardResDTO>
      * @author SEON
-     * @since 25. 2. 5.
+     * @since 25. 2. 23.
      */
     public List<BoardResDTO> getBoardList(){
         List<Board> boardList = boardRepository.findBoardList();

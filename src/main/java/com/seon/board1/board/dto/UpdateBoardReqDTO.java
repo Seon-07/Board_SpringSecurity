@@ -11,7 +11,7 @@ import java.util.UUID;
  * @author SEON
  * @version 1.0
  * @Class UpdateBoardReqDTO
- * @since 25. 2. 5.
+ * @since 25. 2. 23.
  */
 @AllArgsConstructor
 @NoArgsConstructor

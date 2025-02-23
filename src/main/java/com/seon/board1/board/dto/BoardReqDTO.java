@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
  * @author SEON
  * @version 1.0
  * @Class BoardReqDTO
- * @since 25. 2. 5.
+ * @since 25. 2. 23.
  */
 @AllArgsConstructor
 @NoArgsConstructor
