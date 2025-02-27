@@ -51,6 +51,7 @@ public class BoardService {
      * @author SEON
      * @since 25. 2. 23.
      */
+
     @Transactional
     public boolean deleteBoard(DeleteBoardReqDTO deleteBoardReqDTO) {
         String id = deleteBoardReqDTO.getId();
